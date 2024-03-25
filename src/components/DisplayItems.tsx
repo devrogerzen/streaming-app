@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { MovieShowsWrapper } from '../styles/Styles.modules.ts'
 import axios from 'axios'
-import { trending } from '../modules/ApiLinks.ts'
 import { CircularProgress } from '@mui/material'
 
 
@@ -45,13 +44,13 @@ const [loading, setLoading] = useState(false)
 useEffect(() => {
   const fetchMovies = async () => {
     try {
-     const response = await axios.get(`${trending}`, {
+     const response = await axios.get(`${apiEndpoint}`, {
         params: {
           page: currentPage,
         },
      }) 
      const { results, total_pages } = response.data
-     setShowItems(results.slice(0, 16))
+     setShowItems(results.slice(0, numberOfMovies))
      setTotalPages(total_pages)
      setTimeout(() => {
       	setLoading(true)
@@ -60,8 +59,9 @@ useEffect(() => {
     console.error("Error Fetching Movies",error)
     }
   }
+  
   fetchMovies()
-}, [currentPage, ])
+}, [currentPage, apiEndpoint, numberOfMovies])
 
 
 //Function to change the date format
@@ -74,10 +74,23 @@ return date.toLocaleDateString('en-Us', options)
 }
 
 
+//! Previus Page Button
+const prevItemsPage = () => { 
+  if (currentPage < totalPages ) {
+    setCurrentPage((nextPage)  => nextPage + 1)
+  }
+}
+
+//! Next Page Button
+const nexItemsPage = () => {
+  if (currentPage > 1) {
+    setCurrentPage((prevPage) => prevPage - 1)
+  }
+}
 
   return (
     <MovieShowsWrapper>
-      {loading ? (
+      {!loading ? (
         <div className='loadingOverlay' >
           <CircularProgress size={50}  color='warning' />
         <p>Loading</p>
@@ -90,7 +103,7 @@ return date.toLocaleDateString('en-Us', options)
         <h1>{itemHeading}</h1>
 </div>
 <div className="movieCard">
-  {showItems.map((item ) => {
+  {showItems.map((item,  ) => {
     const percentage = (item.vote_average / 10) * 100
       
    return (
@@ -118,7 +131,26 @@ return date.toLocaleDateString('en-Us', options)
     </>
    )
 })}
-
+     
+      
+     {
+        showButtons && (
+          <div className="buttons">
+            {currentPage > 1 && (
+              <button className='btnPrev' onClick={prevItemsPage}>Back</button>
+            )}
+          </div>
+      )} 
+<p>{currentPage}</p>
+{
+  showButtons && (
+    <div className="buttons">
+      {currentPage < totalPages && (
+        <button className='btnPrev' onClick={nexItemsPage}>Next</button>
+      )}
+</div>
+  )
+}
 </div>
 
 </>
