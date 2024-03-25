@@ -1,5 +1,6 @@
 import { AppBar,Toolbar, Typography, Tabs,Tab, Button } from '@mui/material'
 import { NavbarWrapper } from '../styles/Styles.modules.ts'
+import { useState } from 'react';
 
 
 const menuItems = [
@@ -10,6 +11,14 @@ const menuItems = [
 ]
 
 const Header = () => {
+
+  const [selectedTab, setSelectedTab] = useState(0);
+
+  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
+    setSelectedTab(newValue);
+  };
+
+
   return (
     <NavbarWrapper>
     <AppBar sx={{padding:"10px", background:"#063970" }} >
@@ -17,7 +26,7 @@ const Header = () => {
         <Typography className='logo' >
           ToditoStream
           </Typography>
-        <Tabs className='navLinks' >
+        <Tabs className='navLinks' value={selectedTab} onChange={handleChange} >
           {menuItems.map((item, index) => (
             <Tab className='links' key={index} label={item.name} />
           ))}
