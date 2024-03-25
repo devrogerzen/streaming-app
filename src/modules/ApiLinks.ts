@@ -1,5 +1,5 @@
 //!ApiKeys
-export const APIKEY = "877b95ebfda1740536d654e1cb1c475b"
+export const apiEndpoint = "877b95ebfda1740536d654e1cb1c475b"
 
 //!Movie Endpoints
 export const trending = "https://api.themoviedb.org/3/trending/movie/week"
