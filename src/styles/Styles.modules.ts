@@ -42,5 +42,6 @@ export const NavbarWrapper = styled.div`
 
 //!DisplayItems.tsx
 export const MovieShowsWrapper = styled.div`
- 
+
+
 `;

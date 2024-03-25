@@ -1,5 +1,19 @@
 import { MovieShowsWrapper } from '../styles/Styles.modules.ts'
 
+interface Movie {
+  id:number
+  title:string
+  poster_path:string
+  release_date:string
+  vote_average:number
+
+  //For TV Shows
+
+  first_air_date:string
+  name:string
+
+}
+
 
 const DisplayItems = () => {
   return (
