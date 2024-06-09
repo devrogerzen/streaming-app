@@ -14,8 +14,7 @@ const Header = () => {
 
   const [selectedTab, setSelectedTab] = useState(0);
 
-  const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
-    //@ts-ignore
+  const handleChange = (/*event || */_: React.ChangeEvent<{}>, newValue: number) => {
     setSelectedTab(newValue);
   };
 
