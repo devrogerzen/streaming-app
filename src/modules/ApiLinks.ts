@@ -14,3 +14,6 @@ export const popularShows = "https://api.themoviedb.org/3/tv/popular"
 export const top_Rated_Shows = "https://api.themoviedb.org/3/tv/top_rated"
 export const airing_today = "https://api.themoviedb.org/3/tv/airing_today"
 
+//!Individual Movie/Show Endpoints for ID
+
+
