@@ -52,7 +52,6 @@ const DisplayItems: React.FC<DataProps> = ({
         setTimeout(() => {
           setLoading(true);
         }, 1000);
-        console.log(results);
       } catch (error) {
         console.error("Error Fetching Movies", error);
       }
@@ -104,8 +103,8 @@ const DisplayItems: React.FC<DataProps> = ({
               const percentage = (item.vote_average / 10) * 100;
 
               return (
-                <>
-                  <div className="movie" key={item.id}>
+                <div key={item.id}>
+                  <div className="movie">
                     <div className="movieImage">
                       <img
                         src={`https://image.tmdb.org/t/p/w200/${item.poster_path}`}
@@ -113,7 +112,7 @@ const DisplayItems: React.FC<DataProps> = ({
                       />
                       <span>{percentage.toFixed(0)}%</span>
                     </div>
-                    <div className="movieInfo">
+                    <div className="movieInfo" >
                       {moviesOn && (
                         <>
                           <h4>{item.title}</h4>
@@ -128,7 +127,7 @@ const DisplayItems: React.FC<DataProps> = ({
                       )}
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
 

@@ -76,6 +76,7 @@ export const MovieShowsWrapper = styled.div`
     > h1 {
       margin-bottom: 1.5rem;
       font-family: "Agdasima", sans-serif;
+      margin-left: 2rem;
     }
   }
 
@@ -90,7 +91,8 @@ export const MovieShowsWrapper = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      transition: all 0.3s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      margin-bottom: 3rem;
 
       .movieImage {
         display: flex;
@@ -123,16 +125,130 @@ export const MovieShowsWrapper = styled.div`
           font-size: 15px;
           position: relative;
           bottom: 20px;
-  
         }
       }
 
       &:hover {
         transform: scale(1.04);
       }
+    }
 
-      .movieInfo {
+    .movieInfo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      position: relative;
+      bottom: 10px;
+
+      > h4 {
+        margin-bottom: 0;
+        width: 230px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+      }
+      > p {
+        margin: 8px 0;
+        color: grey;
+        border-bottom: 1px solid grey;
+      }
+    }
+
+    .buttons {
+      text-align: center;
+      border: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 90%;
+      margin: 10px;
+      > p {
+        font-family: "Agdasima", sans-serif;
+      }
+      .btnPrev,
+      .btnNext {
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        background-color: #f76429;
+        font-family: "Acme", sans-serif;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #000;
+          cursor: pointer;
+        }
       }
     }
   }
+`;
+
+//!CoverPage.tsx Starts
+
+export const Cover = styled.div`
+  text-align: center;
+  width: 80%;
+  margin: 18px auto 0;
+  position: relative;
+  text-transform: capitalize;
+
+  .coverText {
+    position: absolute;
+    color: #fff;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 30%;
+    text-shadow: 1px 1px 3px black;
+
+    letter-spacing: 1px;
+    line-height: 1;
+
+    > h1 {
+      font-size: 3rem;
+      font-family: "Roboto", sans-serif;
+    }
+    > p {
+      font-size: 20px;
+    }
+    em {
+      font-size: 15px;
+      margin-top: 10px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(3, 37, 65, 0.7);
+  }
+  > img {
+    height: 300px;
+    width: 100%;
+  }
+`;
+//!SearchBar.tsx Starts
+
+export const SearchBar = styled.div`
+  
+
+>input, button {
+
+
+}
+
+
 `;
