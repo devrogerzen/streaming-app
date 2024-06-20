@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <NavbarWrapper>
-      <AppBar sx={{ padding: "10px", background: "#063970" }}>
+      <AppBar sx={{ padding: "10px", background: "#1f1f1e" }}>
         <Toolbar>
           <Typography className="logo">ToditoStream</Typography>
           <Tabs

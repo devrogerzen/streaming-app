@@ -31,6 +31,7 @@ export const NavbarWrapper = styled.div`
     .logo {
       font-size: 1.6rem;
     }
+
     .links,
     .loginBtn {
       font-size: 12px;
@@ -44,9 +45,9 @@ export const MovieShowsWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  margin-top: 5rem;
   padding: 10px;
   box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.5);
+  background: #1f1f1e;
 
   .loadingOverlay {
     position: absolute;
@@ -55,14 +56,12 @@ export const MovieShowsWrapper = styled.div`
     width: 100%;
     height: 100vh;
     background-color: rgba(3, 37, 65, 0.4);
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: #fff;
     z-index: 9999;
-
     > p {
       font-size: 2rem;
       margin-top: 1rem;
@@ -70,13 +69,15 @@ export const MovieShowsWrapper = styled.div`
       letter-spacing: 2px;
     }
   }
+
   .movieHeading {
     width: 100%;
-
     > h1 {
-      margin-bottom: 1.5rem;
+      color: #fff;
       font-family: "Agdasima", sans-serif;
-      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+      margin-left: 3rem;
+      text-transform: capitalize;
     }
   }
 
@@ -85,51 +86,47 @@ export const MovieShowsWrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-
     .movie {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       transition: all 0.4s ease-in-out;
-      margin-bottom: 3rem;
-
+      margin-bottom: 1rem;
       .movieImage {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         cursor: pointer;
-
         > img {
+          width: 150px;
           border-radius: 10px;
           border-bottom-right-radius: 25px;
           box-shadow: 1px 1px 10px 1px #000;
           padding: 5px;
         }
-
         > span {
           border: none;
           height: 35px;
           width: 35px;
           border-radius: 360px;
-          background-color: #f76429;
-
+          background-color: purple;
           display: flex;
           justify-content: center;
           align-items: center;
           align-self: center;
           color: #fff;
-          padding: 5px;
+          padding: 3px;
           font-family: "Agdasima", sans-serif;
-          font-size: 15px;
+          font-size: 14px;
           position: relative;
-          bottom: 20px;
+          bottom: 22px;
         }
       }
 
       &:hover {
-        transform: scale(1.04);
+        transform: scale(1.05);
       }
     }
 
@@ -140,21 +137,25 @@ export const MovieShowsWrapper = styled.div`
       align-items: center;
       margin-top: 0px;
       position: relative;
-      bottom: 10px;
-
+      bottom: 25px;
+      letter-spacing: .5px;
       > h4 {
+        color: #fff;
         margin-bottom: 0;
-        width: 230px;
+        width: 150px;
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: 12px;
+        font-size: 14px;
       }
       > p {
         margin: 8px 0;
         color: grey;
         border-bottom: 1px solid grey;
+        letter-spacing: 1px;
+        font-size: 12px;
+        color: #f76429;
       }
     }
 
@@ -166,9 +167,11 @@ export const MovieShowsWrapper = styled.div`
       align-items: center;
       width: 90%;
       margin: 10px;
+
       > p {
         font-family: "Agdasima", sans-serif;
       }
+
       .btnPrev,
       .btnNext {
         border: none;

@@ -14,17 +14,9 @@ import {
   airing_today,
 } from "../modules/ApiLinks";
 
-
-
 const Home = () => {
   return (
-    <div>
-
-
-<br />
-      <br />
-      <br />
-      <br />
+    <>
       <CoverPage
         title={"Hello"}
         description={"lorenmsf fetrwe"}
@@ -35,7 +27,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${trending}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="trending"
         tvShowsOn={false}
         moviesOn={true}
@@ -43,7 +35,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${upcoming}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="upcoming"
         tvShowsOn={false}
         moviesOn={true}
@@ -51,7 +43,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${popular}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="popular"
         tvShowsOn={false}
         moviesOn={true}
@@ -59,7 +51,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${topRated}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="topRated"
         tvShowsOn={false}
         moviesOn={true}
@@ -67,7 +59,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${now_playing}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="now_playing"
         tvShowsOn={false}
         moviesOn={true}
@@ -76,7 +68,7 @@ const Home = () => {
       /*SHOWS*/
       <DisplayItems
         apiEndpoint={`${trendingShows}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="trendingShows"
         tvShowsOn={true}
         moviesOn={false}
@@ -84,7 +76,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${popularShows}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="popularShows"
         tvShowsOn={true}
         moviesOn={false}
@@ -92,7 +84,7 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${top_Rated_Shows}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="top_Rated_Shows"
         tvShowsOn={true}
         moviesOn={false}
@@ -100,16 +92,14 @@ const Home = () => {
       />
       <DisplayItems
         apiEndpoint={`${airing_today}?api_key=${ApiKey}`}
-        numberOfMovies= {8}
+        numberOfMovies={8}
         itemHeading="airing_today"
         tvShowsOn={true}
         moviesOn={false}
         showButtons={true}
       />
+    </>
+  );
+};
 
-
-    </div>
-  )
-}
-
-export default Home
+export default Home;
