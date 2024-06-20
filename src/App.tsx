@@ -2,8 +2,7 @@ import "./App.css";
 import CoverPage from "./components/CoverPage";
 import DisplayItems from "./components/DisplayItems";
 import Header from "./components/Header";
-import coverPicture from './assets/img.png'
-
+import coverPicture from "./assets/img.png";
 
 import {
   ApiKey,
@@ -26,14 +25,17 @@ function App() {
   return (
     <>
       <Header />
-<br /><br /><br /><br />
+      <br />
+      <br />
+      <br />
+      <br />
       <CoverPage
         title={"Hello"}
         description={"lorenmsf fetrwe"}
         catchyPhrase={"wegwe we twet"}
-        headerImage={coverPicture} 
+        headerImage={coverPicture}
         showSearch={true}
-        showHeaderImage={true} 
+        showHeaderImage={true}
       />
       <DisplayItems
         {...itemsProps}
@@ -108,7 +110,6 @@ function App() {
         moviesOn={false}
         showButtons={true}
       />
-
     </>
   );
 }

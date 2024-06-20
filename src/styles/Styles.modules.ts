@@ -243,12 +243,7 @@ export const Cover = styled.div`
 //!SearchBar.tsx Starts
 
 export const SearchBar = styled.div`
-  
-
->input, button {
-
-
-}
-
-
+  > input,
+  button {
+  }
 `;
