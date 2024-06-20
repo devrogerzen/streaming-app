@@ -232,18 +232,94 @@ export const Cover = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 340px;
     background-color: rgba(3, 37, 65, 0.7);
+    border-bottom-left-radius: 240px;
+    border-bottom-right-radius: 240px;
   }
   > img {
-    height: 300px;
+    height: 340px;
     width: 100%;
+    border-bottom-left-radius: 240px;
+    border-bottom-right-radius: 240px;
+  }
+
+  @media (max-width: 1020px) {
+    .coverText {
+      letter-spacing: 1px;
+      line-height: 0.2;
+      > h1 {
+        font-size: 2.2rem;
+      }
+      > p,
+      em {
+        font-size: 15px;
+      }
+    }
+    &::before {
+      img {
+        height: 240px;
+      }
+    }
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    margin: 5.2rem auto 0;
+    .coverText {
+      line-height: 1;
+      > h1 {
+        font-size: 2.2rem;
+      }
+      > p,
+      em {
+        font-size: 15px;
+      }
+    }
+    &::before {
+      img {
+        height: 240px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
   }
 `;
 //!SearchBar.tsx Starts
 
 export const SearchBar = styled.div`
   > input,
-  button {
+  > button {
+    height: 45px;
+    margin: auto;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    position: absolute;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  > input {
+    width: 70%;
+    box-shadow: 1px 1px 6px 2px grey;
+    padding: 10px;
+    font-size: 18px;
+    &::placeholder {
+      font-size: 16px;
+    }
+  }
+
+  > button {
+    padding: 0 25px;
+    left: 80%;
+    font-size: 15px;
+    background: linear-gradient(
+        90deg,
+        rgba(15, 255, 184, 1) 33%,
+        rgba(7, 110, 112, 1)
+      )
+      100%;
+    font-weight: bolder;
+    cursor: pointer;
   }
 `;
