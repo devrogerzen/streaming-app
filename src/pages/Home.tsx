@@ -19,40 +19,18 @@ const Home = () => {
     <>
       <CoverPage
         title={"TODITOSTREAM"}
-        description={"Bienvenido, averigua que plataforma tiene tu pelicula o serie favorita"}
+        description={
+          "Bienvenido, averigua que plataforma tiene tu pelicula o serie favorita"
+        }
         catchyPhrase={"Con gusto te la aportaremos"}
         headerImage={coverPicture}
         showSearch={true}
         showHeaderImage={true}
       />
       <DisplayItems
-        apiEndpoint={`${trending}?api_key=${ApiKey}`}
-        numberOfMovies={8}
-        itemHeading="trending"
-        tvShowsOn={false}
-        moviesOn={true}
-        showButtons={true}
-      />
-      <DisplayItems
-        apiEndpoint={`${upcoming}?api_key=${ApiKey}`}
-        numberOfMovies={8}
-        itemHeading="upcoming"
-        tvShowsOn={false}
-        moviesOn={true}
-        showButtons={true}
-      />
-      <DisplayItems
         apiEndpoint={`${popular}?api_key=${ApiKey}`}
         numberOfMovies={8}
-        itemHeading="popular"
-        tvShowsOn={false}
-        moviesOn={true}
-        showButtons={true}
-      />
-      <DisplayItems
-        apiEndpoint={`${topRated}?api_key=${ApiKey}`}
-        numberOfMovies={8}
-        itemHeading="topRated"
+        itemHeading="Peliculas: Lo más popular"
         tvShowsOn={false}
         moviesOn={true}
         showButtons={true}
@@ -60,15 +38,24 @@ const Home = () => {
       <DisplayItems
         apiEndpoint={`${now_playing}?api_key=${ApiKey}`}
         numberOfMovies={8}
-        itemHeading="now_playing"
+        itemHeading="Peliculas En Cartelera"
         tvShowsOn={false}
         moviesOn={true}
         showButtons={true}
       />
       <DisplayItems
+        apiEndpoint={`${trending}?api_key=${ApiKey}`}
+        numberOfMovies={8}
+        itemHeading="Peliculas en Tendencias"
+        tvShowsOn={false}
+        moviesOn={true}
+        showButtons={true}
+      />
+
+      <DisplayItems
         apiEndpoint={`${trendingShows}?api_key=${ApiKey}`}
         numberOfMovies={8}
-        itemHeading="trendingShows"
+        itemHeading="Series & Shows: Tendencias"
         tvShowsOn={true}
         moviesOn={false}
         showButtons={true}
@@ -76,7 +63,7 @@ const Home = () => {
       <DisplayItems
         apiEndpoint={`${popularShows}?api_key=${ApiKey}`}
         numberOfMovies={8}
-        itemHeading="popularShows"
+        itemHeading="Popular Shows & Series"
         tvShowsOn={true}
         moviesOn={false}
         showButtons={true}
@@ -84,15 +71,7 @@ const Home = () => {
       <DisplayItems
         apiEndpoint={`${top_Rated_Shows}?api_key=${ApiKey}`}
         numberOfMovies={8}
-        itemHeading="top_Rated_Shows"
-        tvShowsOn={true}
-        moviesOn={false}
-        showButtons={true}
-      />
-      <DisplayItems
-        apiEndpoint={`${airing_today}?api_key=${ApiKey}`}
-        numberOfMovies={8}
-        itemHeading="airing_today"
+        itemHeading="Top Rankedas Shows & Series"
         tvShowsOn={true}
         moviesOn={false}
         showButtons={true}

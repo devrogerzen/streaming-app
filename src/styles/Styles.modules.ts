@@ -220,10 +220,10 @@ export const Cover = styled.div`
       font-family: "Roboto", sans-serif;
     }
     > p {
-      font-size: 20px;
+      font-size: 1.5rem;
     }
     em {
-      font-size: 15px;
+      font-size: 1.5rem;
       margin-top: 10px;
     }
   }

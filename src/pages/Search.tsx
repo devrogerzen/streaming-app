@@ -1,5 +1,9 @@
 import { SearchBar } from "../styles/Styles.modules";
 
+
+
+
+
 const Search = () => {
   return (
     <SearchBar>
