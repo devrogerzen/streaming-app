@@ -4,14 +4,11 @@ import coverPicture from "../assets/img.png";
 import {
   ApiKey,
   trending,
-  upcoming,
   popular,
-  topRated,
   now_playing,
   trendingShows,
   popularShows,
   top_Rated_Shows,
-  airing_today,
 } from "../modules/ApiLinks";
 
 const Home = () => {
