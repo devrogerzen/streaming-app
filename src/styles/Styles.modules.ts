@@ -265,6 +265,11 @@ export const Cover = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
+    .movieInfo {
+      > h4 {
+        font-size: 1.5rem;
+      }
+    }
     .coverText {
       line-height: 1;
       > h1 {
