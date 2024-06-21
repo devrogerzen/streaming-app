@@ -265,7 +265,6 @@ export const Cover = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
-    margin: 5.2rem auto 0;
     .coverText {
       line-height: 1;
       > h1 {
