@@ -74,9 +74,11 @@ export const MovieShowsWrapper = styled.div`
     width: 100%;
     > h1 {
       color: #fff;
+      font-size: 1.5rem;
       font-family: "Agdasima", sans-serif;
-      margin-bottom: 1.5rem;
-      margin-left: 3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      margin-left: 2rem;
       text-transform: capitalize;
     }
   }
@@ -265,11 +267,7 @@ export const Cover = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
-    .movieInfo {
-      > h4 {
-        font-size: 1.5rem;
-      }
-    }
+    
     .coverText {
       line-height: 1;
       > h1 {
