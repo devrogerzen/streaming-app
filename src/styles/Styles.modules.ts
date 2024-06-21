@@ -138,7 +138,7 @@ export const MovieShowsWrapper = styled.div`
       margin-top: 0px;
       position: relative;
       bottom: 25px;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
       > h4 {
         color: #fff;
         margin-bottom: 0;
@@ -166,45 +166,45 @@ export const MovieShowsWrapper = styled.div`
       justify-content: space-evenly;
       align-items: center;
       width: 90%;
-      margin: 10px;
-
+      color: #fff;
+      margin: -1rem auto;
       > p {
         font-family: "Agdasima", sans-serif;
+        font-weight: 900;
       }
+    }
+    .btnPrev,
+    .btnNext {
+      border: none;
+      outline: none;
+      color: #fff;
+      font-size: 20px;
+      padding: 5px 10px;
+      font-weight: bold;
+      background-color: purple;
+      font-family: "Acme", sans-serif;
+      border-radius: 5px;
 
-      .btnPrev,
-      .btnNext {
-        border: none;
-        outline: none;
-        color: #fff;
-        font-size: 18px;
-        font-weight: bold;
-        background-color: #f76429;
-        font-family: "Acme", sans-serif;
-        border-radius: 5px;
-
-        &:hover {
-          background-color: #000;
-          cursor: pointer;
-        }
+      &:hover {
+        background-color: #000;
+        cursor: pointer;
       }
     }
   }
 `;
 
 //!CoverPage.tsx Starts
-
 export const Cover = styled.div`
   text-align: center;
   width: 80%;
-  margin: 18px auto 0;
+  margin: 0 auto;
   position: relative;
   text-transform: capitalize;
 
   .coverText {
     position: absolute;
     color: #fff;
-    top: 45%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -213,12 +213,10 @@ export const Cover = styled.div`
     justify-content: space-evenly;
     height: 30%;
     text-shadow: 1px 1px 3px black;
-
     letter-spacing: 1px;
     line-height: 1;
-
     > h1 {
-      font-size: 3rem;
+      font-size: 4rem;
       font-family: "Roboto", sans-serif;
     }
     > p {
@@ -287,6 +285,7 @@ export const Cover = styled.div`
     }
   }
 `;
+//!CoverPage.tsx Finish
 //!SearchBar.tsx Starts
 
 export const SearchBar = styled.div`

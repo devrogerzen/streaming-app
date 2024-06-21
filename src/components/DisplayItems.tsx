@@ -112,7 +112,7 @@ const DisplayItems: React.FC<DataProps> = ({
                       />
                       <span>{percentage.toFixed(0)}%</span>
                     </div>
-                    <div className="movieInfo" >
+                    <div className="movieInfo">
                       {moviesOn && (
                         <>
                           <h4>{item.title}</h4>
@@ -130,26 +130,27 @@ const DisplayItems: React.FC<DataProps> = ({
                 </div>
               );
             })}
-
-            {showButtons && (
-              <div className="buttons">
-                {currentPage > 1 && (
-                  <button className="btnPrev" onClick={prevItemsPage}>
-                    Back
-                  </button>
-                )}
-              </div>
-            )}
-            <p>{currentPage}</p>
-            {showButtons && (
-              <div className="buttons">
-                {currentPage < totalPages && (
-                  <button className="btnPrev" onClick={nextItemsPage}>
-                    Next
-                  </button>
-                )}
-              </div>
-            )}
+            <div className="buttons">
+              {showButtons && (
+                <div className="buttons">
+                  {currentPage > 1 && (
+                    <button className="btnPrev" onClick={prevItemsPage}>
+                      Back
+                    </button>
+                  )}
+                </div>
+              )}
+              <p>{currentPage}</p>
+              {showButtons && (
+                <div className="buttons">
+                  {currentPage < totalPages && (
+                    <button className="btnPrev" onClick={nextItemsPage}>
+                      Next
+                    </button>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
         </>
       )}

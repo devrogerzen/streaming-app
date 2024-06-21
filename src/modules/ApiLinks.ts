@@ -2,10 +2,15 @@
 export const ApiKey = "877b95ebfda1740536d654e1cb1c475b";
 
 //!Movie Endpoints
+// Tendencias
 export const trending = "https://api.themoviedb.org/3/trending/movie/week";
+//Proximamente
 export const upcoming = "https://api.themoviedb.org/3/movie/upcoming";
+//Populares
 export const popular = "https://api.themoviedb.org/3/movie/popular";
+//Top Ranking
 export const topRated = "https://api.themoviedb.org/3/movie/top_rated";
+//En Emision
 export const now_playing = "https://api.themoviedb.org/3/movie/now_playing";
 
 //!Tv Show Endpoints

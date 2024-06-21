@@ -18,9 +18,9 @@ const Home = () => {
   return (
     <>
       <CoverPage
-        title={"Hello"}
-        description={"lorenmsf fetrwe"}
-        catchyPhrase={"wegwe we twet"}
+        title={"TODITOSTREAM"}
+        description={"Bienvenido, averigua que plataforma tiene tu pelicula o serie favorita"}
+        catchyPhrase={"Con gusto te la aportaremos"}
         headerImage={coverPicture}
         showSearch={true}
         showHeaderImage={true}
@@ -65,7 +65,6 @@ const Home = () => {
         moviesOn={true}
         showButtons={true}
       />
-      /*SHOWS*/
       <DisplayItems
         apiEndpoint={`${trendingShows}?api_key=${ApiKey}`}
         numberOfMovies={8}

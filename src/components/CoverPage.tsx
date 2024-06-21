@@ -1,4 +1,5 @@
-import { Cover, SearchBar } from "../styles/Styles.modules";
+import Search from "../pages/Search";
+import { Cover } from "../styles/Styles.modules";
 
 interface CoverProps {
   title: string;
@@ -27,12 +28,7 @@ const CoverPage: React.FC<CoverProps> = ({
 
       {showHeaderImage && <img src={headerImage} alt="img" />}
 
-      {showSearch && (
-        <SearchBar>
-          <input type="search" placeholder="Search 10000 of Movies...." />
-          <button>Search</button>
-        </SearchBar>
-      )}
+      {showSearch && <Search />}
     </Cover>
   );
 };
